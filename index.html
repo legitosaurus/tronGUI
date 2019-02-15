@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tron</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assests\materialize\css\materialize.css">
+    <link rel="stylesheet" href="assests\main.css">
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+
+    </script>
+    <script type="text/javascript" src="assests\jquery.min.js"></script>
+    <script src="assests\materialize\js\materialize.min.js"></script>
+
+    <script>
+
+        $(function() {
+  var chk = $('#check');
+  var btn = $('#executeBat');
+
+  chk.on('change', function() {
+    btn.prop("disable", !this.checked);//true: disabled, false: enabled color: ed0e2d
+  }).trigger('change'); //page load trigger event
+});
+
+</script>
+    <script>if (window.module) module = window.module;</script>
+
+</head>
+
+<body class="container">
+    <h6>Main Options</h6>
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header ">
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    <span>Anti-virus scans</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p>Perform KVRT, MBAM and SAV scans(-sa)</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    <span>Application patches</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p>Patch 7-Zip or Adobe Flash(-sap)</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    <span>De-bloat</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p>OEM bloatware removal(-sdb)</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    <span>Defrag</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p>Defrag places each part of a program together instead of scattered throughout the hard drive, allowing the read-write head to access the data faster on the hard drive.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    <span>DISM</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p>The Deployment Image Servicing and Management (DISM) tool can be used to scan and repair potential issues with the .wim store in Windows that may impact system files.</p>
+            </div>
+        </li>
+    </ul>
+
+
+    <a class="waves-effect waves-light btn  modal-trigger" href="#modal1">Ready</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Accept EULA(please read)</h4>
+            <p>READ THE INSTRUCTIONS and understand what Tron does, because it
+                does a lot of stuff that, while not harmful, can be annoying if not
+                expected. e.g. wiping temp files, Local Store, cookies, etc. So if
+                Tron does something you didn't expect and you didn't read the
+                instructions, it is YOUR FAULT.
+                tron.bat and the supporting code and scripts are free and open-source
+                under the MIT License. All 3rd-party tools Tron calls ^(MBAM, KVRT,
+                etc^) are bound by their respective licenses. It is YOUR
+                RESPONSIBILITY to determine if you have the rights to use these tools
+                in whatever environment you're in.
+
+                BOTTOM LINE: By running Tron you accept complete responsibility for
+                anything that happens. There is NO WARRANTY, you run it at your OWN
+                RISK and anything that happens, good or bad, is YOUR RESPONSIBILITY.
+                If you don't agree to this then don't run Tron.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-red btn-flat">DISAGREE</a>
+            <a class="waves-effect waves-green btn-flat red" id="executeBat" href="progress.html">AGREE AND START</a>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal();
+        });
+    </script>
+
+    <script src="assests\index.js"></script>
+</body>
+
+</html>

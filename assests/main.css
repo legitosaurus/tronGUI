@@ -1,0 +1,7 @@
+.block {
+    display: inline-block;
+}
+
+.disabled {
+    pointer-events: none;
+}
