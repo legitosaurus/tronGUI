@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>TronGUI</title>
-    <link rel="stylesheet" type="text/css" href="assests\materialize\css\materialize.css">
-    <script src="assests\materialize\js\materialize.js"></script>
-  </head>
+<html style="background: #080808;">
+<head>
+    <title>Tron</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="assests\materialize\css\materialize.css">
+    <link rel="stylesheet" href="assests\main.css">
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+
+    </script>
+    <script type="text/javascript" src="assests\jquery.min.js"></script>
+    <script src="assests\materialize\js\materialize.min.js"></script>
+    <script type="text/javascript" src="assests\index.js"></script>
+
+    <script>if (window.module) module = window.module;</script>
+
+</head>
   <body>
     <a class="waves-effect waves-light btn" onclick="readLog()" style="margin-left: 100px;margin-right: 100px;">Show Log</a>
     <div style="margin-left: 100px;margin-right: 100px;">

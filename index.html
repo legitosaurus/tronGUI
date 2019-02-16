@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html style="background: #080808;">
 <head>
     <title>Tron</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="assests\materialize\css\materialize.css">
     <link rel="stylesheet" href="assests\main.css">
 
@@ -16,43 +17,37 @@
     </script>
     <script type="text/javascript" src="assests\jquery.min.js"></script>
     <script src="assests\materialize\js\materialize.min.js"></script>
+    <script type="text/javascript" src="assests\index.js"></script>
 
-    <script>
-
-        $(function() {
-  var chk = $('#check');
-  var btn = $('#executeBat');
-
-  chk.on('change', function() {
-    btn.prop("disable", !this.checked);//true: disabled, false: enabled color: ed0e2d
-  }).trigger('change'); //page load trigger event
-});
-
-</script>
     <script>if (window.module) module = window.module;</script>
 
 </head>
 
 <body class="container">
-    <h6>Main Options</h6>
+    <h5>Main Options <label class="checkbox-checker-label">
+        <input type="checkbox" checked="checked" name="checkall" id="checkall" onClick="check(this.checked);" class="checkbox-white"/>
+        <span id="main" name="main" class="text-white">Uncheck All</span>
+    </label></h5>
+    <div class="row">
+    <div class="column">
     <ul class="collapsible" data-collapsible="accordion">
         <li>
             <div class="collapsible-header ">
                 <label>
-                    <input type="checkbox" checked="checked" />
-                    <span>Anti-virus scans</span>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">Telemetry Removal</span>
                 </label>
             </div>
             <div class="collapsible-body">
-                <p>Perform KVRT, MBAM and SAV scans(-sa)</p>
+                <p>Remove all telemetry</p>
             </div>
         </li>
 
         <li>
             <div class="collapsible-header">
                 <label>
-                    <input type="checkbox" checked="checked" />
-                    <span>Application patches</span>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">Application patches</span>
                 </label>
             </div>
             <div class="collapsible-body">
@@ -63,8 +58,8 @@
         <li>
             <div class="collapsible-header">
                 <label>
-                    <input type="checkbox" checked="checked" />
-                    <span>De-bloat</span>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">De-bloat System</span>
                 </label>
             </div>
             <div class="collapsible-body">
@@ -75,30 +70,165 @@
         <li>
             <div class="collapsible-header">
                 <label>
-                    <input type="checkbox" checked="checked" />
-                    <span>Defrag</span>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">Run Defrag</span>
                 </label>
             </div>
             <div class="collapsible-body">
                 <p>Defrag places each part of a program together instead of scattered throughout the hard drive, allowing the read-write head to access the data faster on the hard drive.</p>
             </div>
         </li>
-
-        <li>
-            <div class="collapsible-header">
-                <label>
-                    <input type="checkbox" checked="checked" />
-                    <span>DISM</span>
-                </label>
-            </div>
-            <div class="collapsible-body">
-                <p>The Deployment Image Servicing and Management (DISM) tool can be used to scan and repair potential issues with the .wim store in Windows that may impact system files.</p>
-            </div>
-        </li>
+        </div>
     </ul>
 
+  <div class="column">
+  <ul class="collapsible" data-collapsible="accordion">
+      <li>
+          <div class="collapsible-header ">
+              <label>
+                  <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                  <span class="text-white">Run Anti-Virus Scans</span>
+              </label>
+              <i class="material-icons">arrow_drop_down</i>
+          </div>
+          <div class="collapsible-body">
+              <p>Perform KVRT, MBAM and SAV scans(-sa)</p>
+              <label>
+                  <input type="checkbox" class="checkbox-white"/>
+                  <span class="text-white">Skip KVRT scan(-sk)</span>
+              </label>
+              <label>
+                  <input type="checkbox" class="checkbox-white"/>
+                  <span class="text-white">Skip MBAM installation(-sm)</span>
+              </label>
+              <label>
+                  <input type="checkbox" class="checkbox-white"/>
+                  <span class="text-white">Skip SAV scan(-ss)</span>
+              </label>
+          </div>
+      </li>
+      <li>
+          <div class="collapsible-header">
+              <label>
+                  <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                  <span class="text-white">Remove Metro Apps</span>
+              </label>
+          </div>
+          <div class="collapsible-body">
+              <p>Metro apps are touch-screen-friendly apps written especially for Microsoft's WinRT programming interfaces.</p>
+          </div>
+      </li>
 
-    <a class="waves-effect waves-light btn  modal-trigger" href="#modal1">Ready</a>
+      <li>
+          <div class="collapsible-header">
+              <label>
+                  <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                  <span class="text-white">Run DISM</span>
+              </label>
+          </div>
+          <div class="collapsible-body">
+              <p>The Deployment Image Servicing and Management (DISM) tool can be used to scan and repair potential issues with the .wim store in Windows that may impact system files.</p>
+          </div>
+      </li>
+  </ul>
+</div>
+</div>
+
+<h5>Other Options</h5>
+<div class="row">
+<div class="column">
+<ul class="collapsible" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header ">
+            <label>
+                <input type="checkbox" checked="checked" class="checkbox-white"/>
+                <span class="text-white">Dry Run</span>
+            </label>
+        </div>
+        <div class="collapsible-body">
+            <p>Run through script without executing any jobs(-d)</p>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header ">
+            <label>
+                <input type="checkbox" checked="checked" class="checkbox-white"/>
+                <span class="text-white">Email a report when finished</span>
+            </label>
+        </div>
+        <div class="collapsible-body">
+            <p>Requires you to configure SwithMailSettings.xml(-er)</p>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header ">
+            <label>
+                <input type="checkbox" checked="checked" class="checkbox-white"/>
+                <span class="text-white">Power off after running</span>
+            </label>
+        </div>
+        <div class="collapsible-body">
+            <p>Your system will be shutdown after the program is finished(overrides restart)</p>
+        </div>
+    </li>
+    </div>
+</ul>
+
+<div class="column">
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+      <div class="collapsible-header ">
+          <label>
+              <input type="checkbox" checked="checked" class="checkbox-white"/>
+              <span class="text-white">Run Custom scripts</span>
+          </label>
+
+      </div>
+      <div class="collapsible-body">
+          <p>Has no effect if you haven't supplied custom scripts(-scs)</p>
+      </div>
+  </li>
+</ul>
+</div>
+</div>
+
+<h5>Post Run</h5>
+<div class="row">
+<div class="column">
+<ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="input-field">
+          <select>
+            <option value="">What to do when finished</option>
+            <option value="0">Do nothing</option>
+            <option value="1">Restart</option>
+            <option value="2">Shutdown</option>
+          </select>
+        </div>
+    </li>
+    </div>
+</ul>
+
+<div class="column">
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+      <div class="collapsible-header ">
+          <label>
+              <input type="checkbox" checked="checked" class="checkbox-white"/>
+              <span class="text-white">Run Custom scripts</span>
+          </label>
+
+      </div>
+      <div class="collapsible-body">
+          <p>Has no effect if you haven't supplied custom scripts(-scs)</p>
+      </div>
+  </li>
+</ul>
+</div>
+</div>
+
+
+    <a class="waves-effect waves-light btn modal-trigger red" onclick="ready();" href="#modal1">Ready</a>
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
@@ -122,17 +252,17 @@
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-red btn-flat">DISAGREE</a>
-            <a class="waves-effect waves-green btn-flat red" id="executeBat" href="progress.html">AGREE AND START</a>
+            <a class="waves-effect waves-green btn-flat red space-bottom" id="executeBat" href="progress.html">AGREE AND START</a>
         </div>
     </div>
 
     <script>
         $(document).ready(function() {
             $('.modal-trigger').leanModal();
+            $('select').material_select();
         });
-    </script>
 
-    <script src="assests\index.js"></script>
+    </script>
 </body>
 
 </html>
