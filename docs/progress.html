@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="background: #080808;">
+<head>
+    <title>Tron</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="assests\materialize\css\materialize.css">
+    <link rel="stylesheet" href="assests\main.css">
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+
+    </script>
+    <script type="text/javascript" src="assests\jquery.min.js"></script>
+    <script src="assests\materialize\js\materialize.min.js"></script>
+    <script type="text/javascript" src="assests\index.js"></script>
+
+    <script>if (window.module) module = window.module;</script>
+
+</head>
+  <body class="centered-wrapper">
+    <div id="title-bar">
+        <div id="title">Tron</div>
+        <div id="title-bar-btns">
+          <button id="min-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,5 10,5 10,6 0,6 Z"></path></svg></button>
+          <button id="max-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,0 0,10 10,10 10,0 Z M 1,1 9,1 9,9 1,9 Z"></path></svg></button>
+          <button id="close-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,0 0,0.7 4.3,5 0,9.3 0,10 0.7,10 5,5.7 9.3,10 10,10 10,9.3 5.7,5 10,0.7 10,0 9.3,0 5,4.3 0.7,0 Z"></path></svg></button>
+      </div>
+    </div>
+
+    <div class="centered-content">
+
+    <a class="waves-effect waves-light btn blue" onclick="readLog()" style="margin-left: 100px;margin-right: 100px;">Show Log</a>
+    <ul style="height:200px;width:600px;border:1px solid #e4e4e4;font:16px/26px Oswald, sans-serif;overflow:auto;" id="log-container"></ul>
+</div>
+    <script src="assests\index.js"></script>
+  </body>
+</html>

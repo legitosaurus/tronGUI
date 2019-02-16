@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html style="background: #080808;">
+<head>
+    <title>Tron</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="assests\materialize\css\materialize.css">
+    <link rel="stylesheet" href="assests\main.css">
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+
+    </script>
+    <script type="text/javascript" src="assests\jquery.min.js"></script>
+    <script src="assests\materialize\js\materialize.min.js"></script>
+    <script type="text/javascript" src="assests\index.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal();
+        });
+    </script>
+
+    <script>if (window.module) module = window.module;</script>
+
+</head>
+
+<body class="centered-wrapper">
+  <div id="title-bar">
+      <div id="title">Tron</div>
+      <div id="title-bar-btns">
+        <button id="min-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,5 10,5 10,6 0,6 Z"></path></svg></button>
+        <button id="max-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,0 0,10 10,10 10,0 Z M 1,1 9,1 9,9 1,9 Z"></path></svg></button>
+        <button id="close-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,0 0,0.7 4.3,5 0,9.3 0,10 0.7,10 5,5.7 9.3,10 10,10 10,9.3 5.7,5 10,0.7 10,0 9.3,0 5,4.3 0.7,0 Z"></path></svg></button>
+    </div>
+  </div>
+  <div class="centered-content">
+    <h5 class="left">Chose What You Want To Run <label class="checkbox-checker-label">
+        <input type="checkbox" checked="checked" name="checkall" id="checkall" onClick="check(this.checked);" class="checkbox-white"/>
+        <span id="main" name="main" class="text-white">Uncheck All</span>
+    </label></h5>
+    <div class="row">
+    <div class="column-left">
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">Telemetry Removal</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p class="align-left">Telemetry is a service in Windows 10 which Contains technical data about the how the Windows devices and its related software is working and send this data periodically to Microsoft so as to enhance the user experience by fixing the Potential issues that occur.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">Application patches</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p class="align-left">Patch 7-Zip or Adobe Flash</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">De-bloat System</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p class="align-left">OEM bloatware removal(-sdb)</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header">
+                <label>
+                    <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                    <span class="text-white">Run Defrag</span>
+                </label>
+            </div>
+            <div class="collapsible-body">
+                <p class="align-left">Defrag places each part of a program together instead of scattered throughout the hard drive, allowing the read-write head to access the data faster on the hard drive.</p>
+            </div>
+        </li>
+        </div>
+    </ul>
+
+  <div class="column-right">
+  <ul class="collapsible" data-collapsible="accordion">
+      <li>
+          <div class="collapsible-header ">
+              <label>
+                  <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                  <span class="text-white">Run Anti-Virus Scans</span>
+              </label>
+              <i class="material-icons">arrow_drop_down</i>
+          </div>
+          <div class="collapsible-body">
+              <p class="align-left">Perform KVRT, MBAM and SAV scans</p>
+              <p class="align-left">
+              <label>
+                  <input type="checkbox" class="checkbox-white"/>
+                  <span class="text-white">Skip KVRT scan</span>
+              </label>
+              <label>
+                  <input type="checkbox" class="checkbox-white"/>
+                  <span class="text-white">Skip MBAM installation</span>
+              </label>
+              <label>
+                  <input type="checkbox" class="checkbox-white"/>
+                  <span class="text-white">Skip SAV scan</span>
+              </label>
+            </p>
+          </div>
+      </li>
+      <li>
+          <div class="collapsible-header">
+              <label>
+                  <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                  <span class="text-white">Remove Metro Apps</span>
+              </label>
+          </div>
+          <div class="collapsible-body">
+              <p class="align-left">Metro apps are touch-screen-friendly apps written especially for Microsoft's WinRT programming interfaces.</p>
+          </div>
+      </li>
+
+      <li>
+          <div class="collapsible-header">
+              <label>
+                  <input type="checkbox" checked="checked" class="checkbox-white" name="mainoptions"/>
+                  <span class="text-white">Run DISM</span>
+              </label>
+          </div>
+          <div class="collapsible-body">
+              <p class="align-left">The Deployment Image Servicing and Management (DISM) tool can be used to scan and repair potential issues with the .wim store in Windows that may impact system files.</p>
+          </div>
+      </li>
+  </ul>
+</div>
+</div>
+
+<h5>Other Options</h5>
+<div class="row">
+<div class="column-left">
+<ul class="collapsible" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header ">
+            <label>
+                <input type="checkbox" class="checkbox-white"/>
+                <span class="text-white">Dry Run</span>
+            </label>
+        </div>
+        <div class="collapsible-body">
+            <p class="align-left">Run through script without executing any jobs</p>
+        </div>
+    </li>
+    </div>
+</ul>
+
+<div class="column-right">
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+      <div class="collapsible-header ">
+          <label>
+              <input type="checkbox" class="checkbox-white"/>
+              <span class="text-white">Run Custom scripts</span>
+          </label>
+
+      </div>
+      <div class="collapsible-body">
+          <p class="align-left">Has no effect if you haven't supplied custom scripts</p>
+      </div>
+  </li>
+</ul>
+</div>
+</div>
+
+<h5>Post Run</h5>
+<div class="row">
+<div class="column-left">
+<ul class="collapsible" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header ">
+            <label>
+                <input type="checkbox" class="checkbox-white"/>
+                <span class="text-white">Upload Debug Logs</span>
+            </label>
+        </div>
+        <div class="collapsible-body">
+            <p class="align-left">Send tron.log and the system GUID dump to the Tron developer</p>
+        </div>
+    </li>
+    <li>
+      <div class="input-field">
+          <select>
+            <option value="" disabled selected>What to do when finished</option>
+            <option value="1">Do nothing</option>
+            <option value="2">Restart</option>
+            <option value="3">Shutdown</option>
+          </select>
+        </div>
+    </li>
+    </div>
+</ul>
+
+<div class="column-right">
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+      <div class="collapsible-header ">
+          <label>
+              <input type="checkbox" class="checkbox-white"/>
+              <span class="text-white">Self-destruct</span>
+          </label>
+      </div>
+      <div class="collapsible-body">
+          <p class="align-left">Tron deletes itself after running and leaves logs intact</p>
+      </div>
+  </li>
+  <li>
+      <div class="collapsible-header ">
+          <label>
+              <input type="checkbox" class="checkbox-white"/>
+              <span class="text-white">Email a report when finished</span>
+          </label>
+      </div>
+      <div class="collapsible-body">
+          <p class="align-left">Requires you to configure SwithMailSettings.xml</p>
+      </div>
+  </li>
+</ul>
+</div>
+</div>
+
+<div class="row">
+     <div class="col s12">
+        <a class="waves-effect waves-light btn modal-trigger red space-bottom" onclick="ready();" href="#eula">Ready</a>
+     </div>
+</div>
+</div>
+    <!-- Modal Structure -->
+    <div id="eula" class="modal">
+        <div class="modal-content center">
+            <h4>Accept EULA(please read)</h4>
+            <p>READ THE INSTRUCTIONS and understand what Tron does, because it
+                does a lot of stuff that, while not harmful, can be annoying if not
+                expected. e.g. wiping temp files, Local Store, cookies, etc. So if
+                Tron does something you didn't expect and you didn't read the
+                instructions, it is YOUR FAULT.
+                tron.bat and the supporting code and scripts are free and open-source
+                under the MIT License. All 3rd-party tools Tron calls ^(MBAM, KVRT,
+                etc^) are bound by their respective licenses. It is YOUR
+                RESPONSIBILITY to determine if you have the rights to use these tools
+                in whatever environment you're in.
+
+                BOTTOM LINE: By running Tron you accept complete responsibility for
+                anything that happens. There is NO WARRANTY, you run it at your OWN
+                RISK and anything that happens, good or bad, is YOUR RESPONSIBILITY.
+                If you don't agree to this then don't run Tron.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-red btn-flat">DISAGREE</a>
+            <a class="waves-effect waves-green btn-flat red space-bottom" id="executeBat" href="progress.html">AGREE AND START</a>
+        </div>
+    </div>
+    <script>
+    $('select').material_select();
+    </script>
+</body>
+
+</html>
