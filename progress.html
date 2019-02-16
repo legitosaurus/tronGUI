@@ -22,11 +22,21 @@
     <script>if (window.module) module = window.module;</script>
 
 </head>
-  <body>
-    <a class="waves-effect waves-light btn" onclick="readLog()" style="margin-left: 100px;margin-right: 100px;">Show Log</a>
-    <div style="margin-left: 100px;margin-right: 100px;">
-    <ul style="height:200px;width:600px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="log-container"></ul>
+  <body class="centered-wrapper">
+    <div id="title-bar">
+        <div id="title">Tron</div>
+        <div id="title-bar-btns">
+          <button id="min-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,5 10,5 10,6 0,6 Z"></path></svg></button>
+          <button id="max-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,0 0,10 10,10 10,0 Z M 1,1 9,1 9,9 1,9 Z"></path></svg></button>
+          <button id="close-btn"><svg aria-hidden="true" version="1.1" width="10" height="10"><path style="fill:#e4e4e4;" d="M 0,0 0,0.7 4.3,5 0,9.3 0,10 0.7,10 5,5.7 9.3,10 10,10 10,9.3 5.7,5 10,0.7 10,0 9.3,0 5,4.3 0.7,0 Z"></path></svg></button>
+      </div>
     </div>
+
+    <div class="centered-content">
+
+    <a class="waves-effect waves-light btn blue" onclick="readLog()" style="margin-left: 100px;margin-right: 100px;">Show Log</a>
+    <ul style="height:200px;width:600px;border:1px solid #e4e4e4;font:16px/26px Oswald, sans-serif;overflow:auto;" id="log-container"></ul>
+</div>
     <script src="assests\index.js"></script>
   </body>
 </html>

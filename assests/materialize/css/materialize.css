@@ -5760,7 +5760,7 @@ body.keyboard-focused .dropdown-content li:focus {
   margin: auto;
   overflow-y: auto;
   border-radius: 2px;
-  border: 5px solid red;
+  border: 2px solid #f44336;
   will-change: top, opacity;
 }
 
@@ -7238,7 +7238,7 @@ select:disabled {
 .select-dropdown li.disabled,
 .select-dropdown li.disabled > span,
 .select-dropdown li.optgroup {
-  color: rgba(0, 0, 0, 0.3);
+  color: #333030;
   background-color: transparent;
 }
 
