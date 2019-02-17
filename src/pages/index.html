@@ -3,29 +3,32 @@
 <head>
     <title>Tron</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- FONT IMPORTS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="assests\materialize\css\materialize.css">
-    <link rel="stylesheet" href="assests\main.css">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,500,700">
 
-    <script>
-        if (typeof module === 'object') {
-            window.module = module;
-            module = undefined;
-        }
+    <!-- STYLESHEET IMPORTS -->
+    <link rel="stylesheet" href="..\stylesheets\materialize.css">
+    <link rel="stylesheet" href="..\stylesheets\style.css">
 
-    </script>
-    <script type="text/javascript" src="assests\jquery.min.js"></script>
-    <script src="assests\materialize\js\materialize.min.js"></script>
-    <script type="text/javascript" src="assests\index.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('.modal-trigger').leanModal();
-        });
-    </script>
-
+    <!-- DO NOT EDIT REQUIRED BY ELECTRON -->
+    <script>"object"==typeof module&&(window.module=module,module=void 0);</script>
+    <!-- JQUERY IMPORT -->
+    <script type="text/javascript" src="..\javascript\jquery.min.js"></script>
+    <!-- DO NOT EDIT REQUIRED BY ELECTRON -->
     <script>if (window.module) module = window.module;</script>
+
+    <!-- JAVASCRIPT IMPORTS -->
+    <script type="text/javascript" src="..\javascript\materialize.js"></script>
+    <script type="text/javascript" src="..\javascript\index.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $(".modal-trigger").leanModal();
+        $('select').material_select();
+      });
+    </script>
 
 </head>
 
@@ -271,12 +274,9 @@
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-red btn-flat">DISAGREE</a>
-            <a class="waves-effect waves-green btn-flat red space-bottom" id="executeBat" href="progress.html">AGREE AND START</a>
+            <a class="waves-effect waves-green btn-flat red space-bottom" id="btn-start">AGREE AND START</a>
         </div>
     </div>
-    <script>
-    $('select').material_select();
-    </script>
 </body>
 
 </html>

@@ -1,0 +1,17 @@
+{
+  "name": "Tron",
+  "version": "0.1.0",
+  "description": "UI for TronScript",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js"
+  },
+  "author": "Pavitar Saini",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^1.0.1"
+  },
+  "dependencies": {
+    "tail": "^2.0.2"
+  }
+}

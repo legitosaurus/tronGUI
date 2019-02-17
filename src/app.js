@@ -1,6 +1,7 @@
 'use strict';
 
 const electron = require('electron');
+const { ipcMain } = require("electron");
 const {Menu} = require('electron')
 const app = electron.app;  // Module to control application life.
 const BrowserWindow = electron.BrowserWindow;  // Module to create native browser window.
@@ -26,7 +27,7 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({width: 700,height: 650, frame: false});
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  mainWindow.loadURL('file://' + __dirname + '/pages/index.html');
   console.log('Ready');
 
   // Open the DevTools.
@@ -39,4 +40,18 @@ app.on('ready', function() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+});
+
+ipcMain.on("changeWindow", function(event, arg) {
+    switch (arg) {
+        case "progress":
+            mainWindow.loadURL('file://' + __dirname + '/pages/progress.html');
+            break;
+        case "page2":
+            mainWindow.loadURL("Page2 URL");
+            break;
+        case "page3":
+            mainWindow.loadURL("Page3 URL");
+            break;
+    }
 });
